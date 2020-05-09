@@ -1,0 +1,13 @@
+services:
+   mysqlappl13:
+     image: mysql:5.7
+     container_name: mysqlappl13
+     environment:
+       - MYSQL_ROOT_PASSWORD=s
+       - MYSQL_DATABASE=restapi
+       - MYSQL_USER=root
+       - MYSQL_PASSWORD=s
+     volumes:
+       - db_data:/var/lib/mysql
+     ports:
+       - "3306:3306"
